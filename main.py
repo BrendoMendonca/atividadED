@@ -22,8 +22,15 @@ def load_from(fileName):
         l += 1 #incremento da linha
     return g
 
+def print_matriz(matriz): #função para imprimir a matriz
+    for row in matriz:
+        print(row)
+
+
 gr = load_from("pcv4.txt")
-gr.print()
+#gr.print()
+print("Matriz de Adjacência:")
+print_matriz(gr.matriz)
 dist, ant = gr.bfs(3)
 print(dist)
 print(ant)

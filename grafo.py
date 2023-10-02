@@ -7,7 +7,7 @@ class Grafo:
         self.list = [[]for _ in range(n)] #inicialização da lista de tamanho n vazia
 
     def print(self):
-        print(self.matriz)
+        #print(self.matriz)
         print(self.list)
     
     def bfs(self, source):
