@@ -23,14 +23,31 @@ def load_from(fileName):
     return g
 
 def print_matriz(matriz): #função para imprimir a matriz
-    for row in matriz:
-        print(row)
+    for i, row in enumerate(matriz):
+        print(f"{i}: {row}")
 
 
 gr = load_from("pcv4.txt")
-#gr.print()
-print("Matriz de Adjacência:")
+
+print("Lista de adjacência")
+gr.print()
+
+print("\nMatriz de Adjacência:")
 print_matriz(gr.matriz)
-dist, ant = gr.bfs(3)
-print(dist)
-print(ant)
+print()
+
+dist, ant = gr.bfs(2)
+
+print("\nDistancia dos vértices em relação ao vértice de origem")
+print(f"{dist}\n")
+
+print("Antecessores de cada vértice em relação ao vértice de origem")
+print(f"{ant}\n")
+
+print("Caminho entre 0 e 3 (limite de 3 arestas):")
+caminho = gr.bfs_caminho(0, 3, 3)
+print(f"{caminho}\n")
+
+print("Caminho entre 0 e 3 (limite de 2 aresta):")
+caminho = gr.bfs_caminho(0, 3, 2)
+print(f"{caminho}\n")
