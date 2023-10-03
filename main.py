@@ -1,4 +1,4 @@
-from atividade_grafo.grafo import Grafo
+from grafo import Grafo
 
 def load_from(fileName): 
     f = open(fileName, 'r')
